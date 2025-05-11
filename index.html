@@ -1,12 +1,40 @@
+<!-- templates/index.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Fake News Detector</title>
+    <meta charset="UTF-8">
+    <title>Fake News Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2em;
+            background-color: #f0f0f0;
+        }
+
+        form {
+            background: white;
+            padding: 1.5em;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 600px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 0.5em;
+            margin-bottom: 1em;
+        }
+
+        input[type="submit"] {
+            padding: 0.5em 1em;
+        }
+    </style>
 </head>
 <body>
-    <h1>Fake News Detector</h1>
-    <form action="/predict" method="post">
-        <textarea name="text" rows="10" cols="60" placeholder="Enter news content here..."></textarea><br><br>
+    <h1>Fake News Detection</h1>
+    <form method="POST" action="/predict">
+        <label for="news">Enter News Text:</label><br>
+        <input type="text" id="news" name="news" required><br>
         <input type="submit" value="Check">
     </form>
 </body>
