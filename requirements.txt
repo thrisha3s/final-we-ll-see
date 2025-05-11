@@ -1,0 +1,10 @@
+Flask
+scikit-learn==1.3.0
+gunicorn
+pandas
+pickle-mixin
+numpy==1.24.4
+cython==0.29.24
+
+
+
